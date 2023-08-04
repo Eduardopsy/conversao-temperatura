@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: meureplicaset
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: conversor
+  template:
+    metadata:
+      labels:
+        app: conversor
+    spec:
+      containers:
+        - name: site
+          image: eduardopsy/conversao-temperatura:latest
+          ports:
+              - containerPort: 80
