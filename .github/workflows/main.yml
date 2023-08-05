@@ -42,4 +42,6 @@ jobs:
           file: src/Dockerfile
           push: true
           tags:
-            eduardopsy/conversao-temperatura
+            eduardopsy/conversao-temperatura:${{github.run_number}}
+            eduardopsy/conversao-temperatura:latest
+            
